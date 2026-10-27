@@ -1,0 +1,128 @@
+# PromptFoundry local/production-like stack.
+#
+#   make up     # postgres + redis + prometheus + grafana
+#   make docker # everything, including API, worker, beat
+#
+# Constraints honoured: no scraping services, no browser automation, no third-party
+# trackers. The only outbound calls are official LLM/marketplace APIs whose keys you
+# provide (and the connectors stay disabled until you do).
+
+name: promptfoundry
+
+x-app-env: &app-env
+  PF_ENV: ${PF_ENV:-local}
+  PF_LOG_LEVEL: ${PF_LOG_LEVEL:-INFO}
+  DATABASE_URL: postgresql+psycopg://promptfoundry:${POSTGRES_PASSWORD:-promptfoundry}@postgres:5432/promptfoundry
+  REDIS_URL: redis://redis:6379/0
+  CELERY_BROKER_URL: redis://redis:6379/0
+  CELERY_TASK_ALWAYS_EAGER: "false"
+  PF_DATA_DIR: /app/var
+  PF_ARTIFACTS_DIR: /app/var/artifacts
+  PF_SIGNING_KEY: ${PF_SIGNING_KEY:-change-me-before-any-real-deployment}
+  PF_REQUIRE_HUMAN_APPROVAL: ${PF_REQUIRE_HUMAN_APPROVAL:-true}
+  PF_AUTO_PUBLISH_ENABLED: ${PF_AUTO_PUBLISH_ENABLED:-false}
+  PF_ADMIN_EMAIL: ${PF_ADMIN_EMAIL:-}
+  PF_ADMIN_PASSWORD: ${PF_ADMIN_PASSWORD:-}
+  OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+  ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+  GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
+  OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT:-}
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: promptfoundry
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-promptfoundry}
+      POSTGRES_DB: promptfoundry
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/10-init.sql:ro
+    ports: ["5432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U promptfoundry -d promptfoundry"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory-policy", "noeviction"]
+    volumes: [redisdata:/data]
+    ports: ["6379:6379"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  api:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    environment:
+      <<: *app-env
+      PF_CORS_ORIGINS: ${PF_CORS_ORIGINS:-http://localhost:3000,http://localhost:8000}
+    command:
+      - sh
+      - -c
+      - "alembic upgrade head && python -m db.seed || true; uvicorn backend.main:app --host 0.0.0.0 --port 8000 --proxy-headers"
+    ports: ["8000:8000"]
+    volumes: ["artifacts:/app/var/artifacts"]
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_healthy }
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    environment: *app-env
+    command: ["celery", "-A", "workers.celery_app.app", "worker", "-l", "info", "-Q", "promptfoundry", "--concurrency", "2"]
+    volumes: ["artifacts:/app/var/artifacts"]
+    depends_on:
+      api: { condition: service_started }
+      redis: { condition: service_healthy }
+    restart: unless-stopped
+
+  beat:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    environment: *app-env
+    command: ["celery", "-A", "workers.celery_app.app", "beat", "-l", "info", "--schedule", "/tmp/celerybeat-schedule"]
+    depends_on:
+      redis: { condition: service_healthy }
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:v2.53.0
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - promdata:/prometheus
+    ports: ["9090:9090"]
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:11.1.0
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-admin}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - grafanadata:/var/lib/grafana
+    ports: ["3000:3000"]
+    depends_on: [prometheus]
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  redisdata:
+  promdata:
+  grafanadata:
+  artifacts:

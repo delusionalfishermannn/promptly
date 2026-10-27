@@ -1,0 +1,137 @@
+{
+  "_comment": "Synthetic fixture for the mock official-API connector. Contains no third-party content; permission basis is 'synthetic'.",
+  "items": [
+    {
+      "id": "mock-001",
+      "subreddit": "smallbusiness",
+      "title": "Invoice reminder wording that doesn't sound passive aggressive?",
+      "text": "I run a two person studio and clients keep paying 3-4 weeks late. I need wording for a second reminder that stays warm but makes the deadline clear. Would happily pay for a template pack.",
+      "kind": "question",
+      "days_ago": 1,
+      "score": 48,
+      "segment": "smb",
+      "tags": ["billing", "email"]
+    },
+    {
+      "id": "mock-002",
+      "subreddit": "smallbusiness",
+      "title": "How do you chase unpaid invoices without burning the relationship?",
+      "text": "Struggling with cashflow because I hate chasing. Looking for a repeatable structure: friendly nudge, firm reminder, final notice. Invoice amounts around A$1,200-2,000.",
+      "kind": "question",
+      "days_ago": 3,
+      "score": 61,
+      "segment": "smb",
+      "tags": ["billing"]
+    },
+    {
+      "id": "mock-003",
+      "subreddit": "marketing",
+      "title": "Cold email prompt that doesn't sound like every other agency",
+      "text": "Our agency sends outreach for clients and everything reads the same. Need a prompt that produces specific, human cold emails grounded in the prospect's site, not generic flattery.",
+      "kind": "question",
+      "days_ago": 2,
+      "score": 39,
+      "segment": "agency",
+      "tags": ["email"]
+    },
+    {
+      "id": "mock-004",
+      "subreddit": "SEO",
+      "title": "Outline prompts that actually match search intent?",
+      "text": "I write 8 posts a month for clients. My outlines are generic. Looking for a prompt that asks the right questions and lists evidence gaps so the writer knows what to research.",
+      "kind": "question",
+      "days_ago": 4,
+      "score": 33,
+      "segment": "agency",
+      "tags": ["seo"]
+    },
+    {
+      "id": "mock-005",
+      "subreddit": "CustomerSuccess",
+      "title": "Standardising support replies across three agents",
+      "text": "We keep contradicting each other. Need a reusable prompt that turns a complaint into an empathetic reply plus a resolution record with severity and escalation flags.",
+      "kind": "question",
+      "days_ago": 5,
+      "score": 27,
+      "segment": "smb",
+      "tags": ["support"]
+    },
+    {
+      "id": "mock-006",
+      "subreddit": "productmanagement",
+      "title": "Turning a feature idea into a spec engineers can estimate",
+      "text": "No PM on the team. I need a prompt that produces in-scope/out-of-scope, user stories with acceptance criteria, risks and open questions. Tired of specs that are just vibes.",
+      "kind": "question",
+      "days_ago": 6,
+      "score": 44,
+      "segment": "developer",
+      "tags": ["product"]
+    },
+    {
+      "id": "mock-007",
+      "subreddit": "analytics",
+      "title": "Prompt for separating observation from interpretation in reports",
+      "text": "My monthly summaries mix facts and opinion. Looking for a structure with observations, interpretation, limitations and a confidence score.",
+      "kind": "question",
+      "days_ago": 8,
+      "score": 22,
+      "segment": "analyst",
+      "tags": ["data"]
+    },
+    {
+      "id": "mock-008",
+      "subreddit": "smallbusiness",
+      "title": "Preparing questions for my accountant about GST",
+      "text": "Sole trader, cashflow is tight. I want to summarise the month and prepare questions for my accountant. Not after financial advice, just a clear summary and questions.",
+      "kind": "question",
+      "days_ago": 7,
+      "score": 19,
+      "segment": "smb",
+      "tags": ["finance"]
+    },
+    {
+      "id": "mock-009",
+      "subreddit": "teachers",
+      "title": "Lesson plan prompt with observable outcomes?",
+      "text": "Year 10 business studies. I need a 90 minute lesson with learning outcomes, an exercise and a rubric with three levels. Existing lesson plans are too vague.",
+      "kind": "question",
+      "days_ago": 9,
+      "score": 31,
+      "segment": "educator",
+      "tags": ["onboarding"]
+    },
+    {
+      "id": "mock-010",
+      "subreddit": "smallbusiness",
+      "title": "Meeting notes that capture decisions and owners",
+      "text": "We forget action items by Thursday. Need a prompt that turns a messy transcript into decisions, action items with owners and due dates, plus open questions.",
+      "kind": "question",
+      "days_ago": 10,
+      "score": 25,
+      "segment": "smb",
+      "tags": ["meetings"]
+    },
+    {
+      "id": "mock-011",
+      "subreddit": "smallbusiness",
+      "title": "Invoice reminder wording that doesn't sound passive aggressive?",
+      "text": "Duplicate of an earlier post to exercise dedupe: invoice reminder wording for a two person studio, clients paying late.",
+      "kind": "question",
+      "days_ago": 1,
+      "score": 12,
+      "segment": "smb",
+      "tags": ["billing"]
+    },
+    {
+      "id": "mock-012",
+      "subreddit": "webdev",
+      "title": "Strict JSON output schema prompt that never returns markdown",
+      "text": "Building an agent that parses model output. Need prompt patterns that enforce a JSON schema, handle missing information explicitly, and resist prompt injection from customer text.",
+      "kind": "question",
+      "days_ago": 11,
+      "score": 57,
+      "segment": "developer",
+      "tags": ["general"]
+    }
+  ]
+}

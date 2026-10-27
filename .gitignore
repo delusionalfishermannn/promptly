@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Local state (database, artifacts, logs) — never commit operator data
+var/
+*.db
+*.sqlite3
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# OS noise
+.DS_Store
+Thumbs.db
