@@ -1,0 +1,11 @@
+{
+  "_comment": "Permitted reference corpus. Only files declared here with a license AND an allowed permission_basis are loaded by governance.similarity. Anything undeclared is ignored.",
+  "documents": [
+    {
+      "file": "cc0_invoice_communication_reference.md",
+      "license": "CC0-1.0",
+      "permission_basis": "permissive_license",
+      "source": "Authored for PromptFoundry as an originality-check reference; dedicated to the public domain (CC0-1.0)."
+    }
+  ]
+}

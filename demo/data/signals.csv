@@ -1,0 +1,54 @@
+question,kind,created_at,volume,segment,source_url
+"How do I word a polite second reminder for an overdue invoice? My client keeps saying the PO is coming and I don't want to sound aggressive, deadline is Friday.",question,2026-10-21,320,smb,https://example.com/q/1001
+"Need a prompt for invoice reminder emails that stays friendly but firm. Sole trader, 12 regular clients, chasing A$1,850 overdue for three weeks.",question,2026-10-20,210,smb,https://example.com/q/1002
+"Template for a payment reminder that includes the PO number reference and a clear due date? Struggling to get paid on time every month.",question,2026-10-18,180,smb,https://example.com/q/1003
+"Best way to phrase a final notice for an unpaid invoice without threatening legal action. Small business, cashflow is tight and I hate chasing.",question,2026-10-16,140,smb,https://example.com/q/1004
+"Can someone share a structure for billing emails that escalate from friendly to firm? I run a salon and keep wasting time on reminders.",question,2026-10-12,95,smb,https://example.com/q/1005
+"How do I write an invoice follow up for a client who promised payment twice? Would pay for a template that handles the awkward tone.",question,2026-10-08,80,smb,https://example.com/q/1006
+"Looking for a prompt to draft cold outreach emails for my agency without sounding like a robot. Our clients get 40 a day and ignore the generic ones.",question,2026-10-22,260,agency,https://example.com/q/2001
+"Need a template for a newsletter welcome email that actually reads like a human wrote it. Creator with 2400 subscribers, exhausted by writing weekly.",question,2026-10-19,230,creator,https://example.com/q/2002
+"How to write 3 subject line variants for a win-back email sequence? My open rate fell and I'm stuck on phrasing it warmly.",question,2026-10-17,170,creator,https://example.com/q/2003
+"Need prompt for follow-up email after a demo call, should reference what we discussed and keep it under 150 words. B2B agency retainer clients.",question,2026-10-11,120,agency,https://example.com/q/2004
+"Template for a lifecycle email that promotes a new feature without hype? Small business SaaS, we want compliant honest wording.",question,2026-10-05,90,smb,https://example.com/q/2005
+"How do I build an SEO article outline that matches search intent instead of keyword stuffing? I write blog content for three clients and it is tedious.",question,2026-10-23,300,agency,https://example.com/q/3001
+"Need a prompt for blog outlines with H2s and meta description limits. Content marketer, 8 posts a month, waste hours on structure.",question,2026-10-20,190,creator,https://example.com/q/3002
+"Best way to plan article structure for a keyword that has commercial intent? Struggling to make the outline useful rather than generic.",question,2026-10-14,130,agency,https://example.com/q/3003
+"Can someone share a workflow for SEO content briefs that includes evidence gaps? My small business blog gets no traffic and I'm frustrated.",question,2026-10-07,85,smb,https://example.com/q/3004
+"How do I reply to an angry support ticket about lost work without admitting liability? Our helpdesk is drowning and the tone matters.",question,2026-10-22,240,smb,https://example.com/q/4001
+"Need a prompt that turns a complaint into an empathetic support reply plus a structured resolution record. Small team, no QA process.",question,2026-10-21,200,smb,https://example.com/q/4002
+"Template for support responses that flags escalation for refunds and legal threats? We keep missing the sensitive ones.",question,2026-10-15,150,smb,https://example.com/q/4003
+"Struggling to keep support replies consistent across three agents. Looking for a reusable prompt, not another macros doc.",question,2026-10-09,110,smb,https://example.com/q/4004
+"How to summarise a support ticket into category, sentiment and severity automatically? Developer at a small SaaS.",question,2026-10-03,70,developer,https://example.com/q/4005
+"Need a prompt to tailor my resume for a product manager role using only my real experience, no invented achievements.",question,2026-10-19,160,student,https://example.com/q/5001
+"How do I rewrite resume bullets so they show impact? Five years in operations, moving into product, I hate writing about myself.",question,2026-10-17,140,professional,https://example.com/q/5002
+"Template for interview prep questions based on a job description? Final round next week and I'm overwhelmed.",question,2026-10-13,100,student,https://example.com/q/5003
+"Looking for a prompt that compares my CV to a job ad and lists the gaps honestly. Career changer, cannot afford a coach.",question,2026-10-06,75,professional,https://example.com/q/5004
+"Need 5 ad copy variants for a Meta campaign with character limits respected. Selling a $29 prompt pack to small businesses.",question,2026-10-23,210,smb,https://example.com/q/6001
+"How do I write ad headlines that do not make claims I cannot substantiate? Agency running campaigns for clients in finance.",question,2026-10-18,170,agency,https://example.com/q/6002
+"Template for ad angles with a clean A/B test plan, one variable at a time. Our creative testing is chaotic.",question,2026-10-12,120,agency,https://example.com/q/6003
+"Need ad copy that sounds like a human, not a robot, for a local service business. Google Ads, small budget, 6 headlines.",question,2026-10-04,90,smb,https://example.com/q/6004
+"How do I design a 90 minute onboarding lesson for new hires on our CRM? Mixed experience levels and no L&D team.",question,2026-10-21,180,smb,https://example.com/q/7001
+"Need a prompt for lesson plans with learning outcomes and an assessment rubric. Educator, teaching year 10 business studies.",question,2026-10-16,160,educator,https://example.com/q/7002
+"Template for training material that includes exercises and time estimates? Our onboarding is inconsistent and new hires struggle.",question,2026-10-10,110,smb,https://example.com/q/7003
+"Can someone share a structure for a course module that maps to observable outcomes? Frustrated with vague lesson plans.",question,2026-10-02,70,educator,https://example.com/q/7004
+"Need a prompt to turn a feature idea into a product spec with user stories and acceptance criteria. Small team, no PM.",question,2026-10-22,200,developer,https://example.com/q/8001
+"How do I write acceptance criteria that are testable? Our specs are vague and engineers keep asking questions.",question,2026-10-18,150,developer,https://example.com/q/8002
+"Template for a PRD including out-of-scope and open questions? Agency building client products, we lose scope all the time.",question,2026-10-11,120,agency,https://example.com/q/8003
+"Looking for a prompt that turns a roadmap idea into a spec I can estimate from. Product owner at a 20 person company.",question,2026-10-05,85,smb,https://example.com/q/8004
+"How do I summarise a month of sales data into observations and limitations? I keep mixing up facts and interpretation.",question,2026-10-20,160,smb,https://example.com/q/9001
+"Need a prompt for a data analysis summary that separates observation from interpretation. First 60 days of storefront sales.",question,2026-10-17,140,smb,https://example.com/q/9002
+"Template for SQL result summaries with caveats about sample size? Analyst at a small agency, too many dashboards.",question,2026-10-09,95,analyst,https://example.com/q/9003
+"Struggling to write weekly reports that people actually read. Looking for a structured summary prompt with confidence levels.",question,2026-10-01,65,smb,https://example.com/q/9004
+"How do I turn a messy meeting transcript into decisions and action items with owners? We forget everything by Thursday.",question,2026-10-19,150,smb,https://example.com/q/10001
+"Need a prompt for meeting minutes that separates decisions from discussion. Team of six, standups and client calls.",question,2026-10-13,120,agency,https://example.com/q/10002
+"Template for summarising a client call into next steps with owners and dates? Our account managers waste an hour per call.",question,2026-10-05,85,agency,https://example.com/q/10003
+"Need to summarise a supplier agreement and list questions for a lawyer. Not asking for legal advice, just the issues and obligations.",question,2026-10-18,140,smb,https://example.com/q/11001
+"How do I prepare questions for a solicitor about a contract clause that lets the supplier raise prices? Small business, urgent deadline.",question,2026-10-14,110,smb,https://example.com/q/11002
+"Looking for a prompt that summarises policies in plain English and flags ambiguities as questions, never as legal conclusions.",question,2026-10-08,80,smb,https://example.com/q/11003
+"Need help preparing for a medical appointment about recurring headaches. Questions to ask the doctor, not a diagnosis.",question,2026-10-17,130,consumer,https://example.com/q/12001
+"Template to summarise health information in plain English and list red flags to mention to a clinician? Not looking for medical advice.",question,2026-10-07,90,consumer,https://example.com/q/12002
+"How do I summarise my cashflow for the month and prepare questions for my accountant? Sole trader, GST is confusing.",question,2026-10-16,120,smb,https://example.com/q/13001
+"Need a prompt for a budget summary that states assumptions and never recommends investments. Small business owner.",question,2026-10-06,80,smb,https://example.com/q/13002
+"How do I write a prompt that makes a model say what information is missing instead of inventing facts? Keep getting fake statistics.",question,2026-10-21,240,developer,https://example.com/q/14001
+"Looking for templates for prompts that produce strict JSON I can parse, with a schema and no markdown fences.",question,2026-10-15,190,developer,https://example.com/q/14002
+"Best practice for prompt injection resistance when the input is untrusted customer text? Building an agent that reads tickets.",question,2026-10-11,170,developer,https://example.com/q/14003
